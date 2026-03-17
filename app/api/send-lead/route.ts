@@ -3,8 +3,12 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+if (!process.env.RESEND_API_KEY) {
+  throw new Error("RESEND_API_KEY is missing");
+}
+
 export async function POST(req: NextRequest) {
-      console.log("<<<<<<<<<<<API KEY>>>>>>>>>>>:", process.env.RESEND_API_KEY);
+      //console.log("<<<<<<<<<<<API KEY>>>>>>>>>>>:", process.env.RESEND_API_KEY);
   const { name, email, phone, city, course } = await req.json();
 
   const { error } = await resend.emails.send({
