@@ -13,6 +13,7 @@ import RegisterForm from '../register-form'
 import { useEffect, useState } from 'react'
 import WhatsAppSticky from '../whatsapp-button'
 import CoursesTable from '../courses-table'
+import Header from '../header'
 
 const GniotComponents = () => {
 
@@ -44,6 +45,7 @@ const GniotComponents = () => {
   return (
     <div>
       <ScrollProgressBar />
+      <Header  handleOpenForm={handleOpenForm}/>
       <HeroSection />
       <UniversityLogos />
       <PartnershipSection  handleOpenForm={handleOpenForm}/>
