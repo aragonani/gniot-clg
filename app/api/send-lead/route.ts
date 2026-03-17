@@ -13,7 +13,7 @@ export async function POST(req: NextRequest) {
 
   const { error } = await resend.emails.send({
     from: "MBA Admissions <onboarding@resend.dev>", // use resend's default until you verify a domain
-    to: process.env.CLIENT_EMAIL!,
+    to:  [process.env.CLIENT_EMAIL || "your-email@gmail.com"],
     subject: `New Lead: ${name} — ${course}`,
     html: `
       <div style="font-family:sans-serif;max-width:480px;margin:auto;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
