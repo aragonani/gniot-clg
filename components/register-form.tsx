@@ -39,9 +39,14 @@ const courses = [
 ];
 
 const cities = [
-  "Delhi",
+  "Delhi NCR",
   "Mumbai",
   "Bengaluru",
+  "Faridabad",
+  "Ghaziabad",
+  "Meerut",
+  "Aligarh",
+  "Agra",
   "Hyderabad",
   "Chennai",
   "Pune",
@@ -154,7 +159,7 @@ export default function RegisterForm() {
     <div className="register-form-card">
       {/* Header */}
       <div className="form-header">
-        <div className="badge">MBA / PGDM Admissions 2026</div>
+        <div className="badge">UG / PG Admissions 2026</div>
         <h2 className="form-title">Start Your Journey</h2>
         <p className="form-subtitle">
           Fill in the details — we'll take it from here.
@@ -251,8 +256,8 @@ export default function RegisterForm() {
       </button>
 
       <p className="consent-text">
-        By applying, you consent to be contacted via SMS, Email & WhatsApp. This
-        overrides DNC/NDNC registration.
+        By applying, you consent to be contacted via SMS, Email & WhatsApp. 
+        {/* This overrides DNC/NDNC registration. */}
       </p>
 
       {error && (

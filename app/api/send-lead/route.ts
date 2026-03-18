@@ -66,14 +66,14 @@ export async function POST(req: NextRequest) {
     });
 
     await transporter.sendMail({
-      from: `"MBA Admissions" <${process.env.EMAIL_USER}>`,
+      from: `"GNIOT Admissions" <${process.env.EMAIL_USER}>`,
       to: process.env.CLIENT_EMAIL, // client email
       subject: `New Lead: ${name} — ${course}`,
       html: `
       <div style="font-family:sans-serif;max-width:480px;margin:auto;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
         <div style="background:#00648f;padding:24px 28px;">
           <h2 style="color:#fcc423;margin:0;font-size:20px;">New Admission Enquiry</h2>
-          <p style="color:rgba(255,255,255,0.6);margin:4px 0 0;font-size:13px;">MBA / PGDM Admissions 2026</p>
+          <p style="color:rgba(255,255,255,0.6);margin:4px 0 0;font-size:13px;">GNIOT UG / PG Admissions 2026</p>
         </div>
         <div style="padding:24px 28px;background:#fff;">
           

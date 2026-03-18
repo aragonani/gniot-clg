@@ -12,10 +12,10 @@ const stats = [
 ];
 
 const accreditations = [
-  { name: "UGC", shortName: "UGC", color: "#e8f4f8" },
+  { name: "AIMS", shortName: "AIMS", color: "#e8f4f8" },
   { name: "AICTE", shortName: "AICTE", color: "#fff3e0" },
-  { name: "NBA", shortName: "NBA", color: "#e8f5e9" },
-  { name: "AIU", shortName: "AIU", color: "#f3e5f5" },
+  { name: "YUVA", shortName: "YUVA", color: "#e8f5e9" },
+  { name: "NHRD", shortName: "NHRD", color: "#f3e5f5" },
   { name: "UGC-NAAC", shortName: "NAAC", color: "#fce4ec" },
 ];
 
@@ -64,7 +64,7 @@ export default function HeroSection() {
           </h1>
 
           <p className="hero-sub">
-            A transformative MBA & PGDM experience built on 30+ years of forging industry-ready leaders. 
+            A transformative UG & PG experience built on 20+ years of forging industry-ready leaders. 
             Your ambition deserves the best launchpad.
           </p>
 
