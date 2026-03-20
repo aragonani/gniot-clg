@@ -1,5 +1,4 @@
-
-        /* ── Section wrapper ── */
+/* ── Section wrapper ── */
         .hero-section {
           position: relative;
           min-height: 50vh;
@@ -189,10 +188,9 @@
 
         @media (max-width: 480px) {
           .hero-section { padding: 60px 0 40px; }
-           .hero-inner { padding: 0 16px; } /* tighter side padding */
+           .hero-inner { padding: 0 16px; }
           .stats-grid { grid-template-columns: repeat(2, 1fr); }
           .hero-heading { font-size: 28px; }
-           /*  let the form fill full width on mobile */
           .hero-right {
            width: 100%;
            justify-content: stretch;
@@ -200,19 +198,19 @@
         }
 
 
-        
+        /* ── Register Form Card — White/Light-Gray Theme ── */
         .register-form-card {
           background: linear-gradient(
             160deg,
-            #0482b8 0%,
-            #01648e 60%,
-            #02587d 100%
+            #ffffff 0%,
+            #f7f9fa 60%,
+            #f0f4f6 100%
           );
           border-radius: 18px;
           padding: 24px 12px 20px;
           box-shadow:
-            0 32px 64px rgba(0, 0, 0, 0.25),
-            0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+            0 32px 64px rgba(0, 64, 100, 0.12),
+            0 0 0 1px rgba(0, 100, 143, 0.08) inset;
           width: 100%;
           max-width: 100%;
           position: center;
@@ -228,7 +226,7 @@
           border-radius: 50%;
           background: radial-gradient(
             circle,
-            rgba(252, 196, 35, 0.18) 0%,
+            rgba(0, 100, 143, 0.07) 0%,
             transparent 70%
           );
           pointer-events: none;
@@ -237,9 +235,9 @@
         /* Header */
         .badge {
           display: inline-block;
-          background: rgba(252, 196, 35, 0.15);
-          border: 1px solid rgba(252, 196, 35, 0.35);
-          color: #fcc423;
+          background: rgba(0, 100, 143, 0.08);
+          border: 1px solid rgba(0, 100, 143, 0.2);
+          color: #00648f;
           font-size: 11px;
           font-weight: 600;
           letter-spacing: 0.08em;
@@ -251,14 +249,14 @@
         .form-title {
           font-size: 26px;
           font-weight: 800;
-          color: #fff;
+          color: #001f2d;
           line-height: 1.15;
           letter-spacing: -0.02em;
           margin-bottom: 4px;
         }
         .form-subtitle {
           font-size: 13px;
-          color: rgba(255, 255, 255, 0.55);
+          color: #6b8a96;
           margin-bottom: 24px;
         }
 
@@ -272,23 +270,28 @@
         .field-wrap {
           display: flex;
           align-items: center;
-          background: rgba(255, 255, 255, 0.07);
-          border: 1.5px solid rgba(255, 255, 255, 0.1);
+          background: #ffffff;
+          border: 1.5px solid rgba(0, 100, 143, 0.15);
           border-radius: 12px;
           padding: 0 14px;
           transition:
             border-color 0.2s,
-            background 0.2s;
+            background 0.2s,
+            box-shadow 0.2s;
           gap: 10px;
         }
+        .field-wrap:hover {
+          border-color: rgba(0, 100, 143, 0.3);
+        }
         .field-focused {
-          border-color: #fcc423 !important;
-          background: rgba(252, 196, 35, 0.07) !important;
+          border-color: #00648f !important;
+          background: #f0f8fc !important;
+          box-shadow: 0 0 0 3px rgba(0, 100, 143, 0.08) !important;
         }
         .field-icon {
           font-size: 15px;
           flex-shrink: 1;
-          opacity: 0.7;
+          opacity: 0.5;
         }
 
         .field-wrap input,
@@ -297,7 +300,7 @@
           background: transparent;
           border: none;
           outline: none;
-          color: #fff;
+          color: #001f2d;
           font-size: 14px;
           font-family: inherit;
           padding: 13px 0;
@@ -305,21 +308,21 @@
           -webkit-appearance: none;
         }
         .field-wrap input::placeholder {
-          color: rgba(255, 255, 255, 0.4);
+          color: #9db5be;
         }
         .field-wrap select {
           cursor: pointer;
         }
         .field-wrap select option {
-          background: #004d6e;
-          color: #fff;
+          background: #ffffff;
+          color: #001f2d;
         }
         .field-wrap select:invalid,
         .field-wrap select option[value=""] {
-          color: rgba(255, 255, 255, 0.4);
+          color: #9db5be;
         }
 
-        /* Submit */
+        /* Submit — kept exactly the same */
         .submit-btn {
           display: flex;
           align-items: center;
@@ -357,10 +360,8 @@
         /* Consent */
         .consent-text {
           font-size: 10px;
-          color: rgba(255, 255, 255, 0.35);
+          color: #9db5be;
           line-height: 1.5;
           text-align: center;
           margin-top: 14px;
         }
-    
-    
