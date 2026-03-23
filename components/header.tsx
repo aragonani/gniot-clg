@@ -25,7 +25,7 @@ export default function Header({handleOpenForm}: Props) {
     <motion.header
       animate={{ y: hidden ? -100 : 0 }}
       transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 -mt-2 ${
         scrolled
           ? "bg-white/92 backdrop-blur-xl shadow-[0_2px_32px_rgba(0,100,143,0.10)] border-b border-[#00648f]/8"
           : "bg-white/70 backdrop-blur-md"
