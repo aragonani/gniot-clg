@@ -8,7 +8,7 @@ interface Props {
 const CoursesTable = ({ handleOpenForm }: Props) => {
   const courses = [
     { name: "B.Sc", fees: "₹8.1 Lakhs", eligibility: "10+2 with 45%", date: "5 Jan-31 Aug 2026" },
-    { name: "B.Sc", fees: "₹4.5 Lakhs", eligibility: "10+2 with 50%", date: "5 Jan-31 Aug 2026" },
+    { name: "BBA", fees: "₹4.5 Lakhs", eligibility: "10+2 with 50%", date: "5 Jan-31 Aug 2026" },
     { name: "B.Pharm", fees: "₹6.8 Lakhs", eligibility: "10+2 with 55%", date: "5 Jan-31 Aug 2026" },
     { name: "BE/B.Tech", fees: "₹11.2 Lakhs", eligibility: "10+2 with 55%", date: "5 Jan-31 Aug 2026" },
     { name: "BCA", fees: "₹3.9 Lakhs", eligibility: "10+2 with 50%", date: "5 Jan-31 Aug 2026" },
