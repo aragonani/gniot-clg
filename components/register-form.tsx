@@ -35,7 +35,7 @@ const courses = [
   "BA LLB",
   "LLB",
   "GNM (General Nursing & Midwifery)",
-  "D.Pharm (Diploma in Pharmacy)"
+  "D.Pharm (Diploma in Pharmacy)",
 ];
 
 const cities = [
@@ -179,12 +179,22 @@ export default function RegisterForm() {
               type={f.type}
               placeholder={f.placeholder}
               value={(form as Record<string, string>)[f.name]}
-              onChange={handleChange}
+              onChange={(e) => {
+                if (f.name === "phone") {
+                  // Allow only digits & max 10 length
+                  const value = e.target.value.replace(/\D/g, "").slice(0, 10);
+                  setForm({ ...form, phone: value });
+                } else {
+                  handleChange(e);
+                }
+              }}
               onFocus={() => setFocused(f.name)}
               onBlur={() => setFocused(null)}
               autoComplete="off"
             />
+          
           </div>
+          
         ))}
 
         {/* City */}
@@ -234,7 +244,11 @@ export default function RegisterForm() {
       <button
         onClick={handleSubmit}
         disabled={
-          !form.name || !form.email || !form.phone || !form.city || !form.course
+          !form.name ||
+          !form.email ||
+          form.phone.length !== 10 ||
+          !form.city ||
+          !form.course
         }
         className="submit-btn"
       >
@@ -256,7 +270,7 @@ export default function RegisterForm() {
       </button>
 
       <p className="consent-text">
-        By applying, you consent to be contacted via SMS, Email & WhatsApp. 
+        By applying, you consent to be contacted via SMS, Email & WhatsApp.
         {/* This overrides DNC/NDNC registration. */}
       </p>
 
@@ -272,8 +286,6 @@ export default function RegisterForm() {
           Something went wrong. Please try again.
         </p>
       )}
-
-     
     </div>
   );
 }
