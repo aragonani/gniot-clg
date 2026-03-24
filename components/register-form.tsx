@@ -61,7 +61,10 @@ const cities = [
   "Indore",
 ];
 
-export default function RegisterForm() {
+interface Props {
+  formHeading?: string;
+}
+export default function RegisterForm({formHeading}: Props) {
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -159,7 +162,7 @@ export default function RegisterForm() {
     <div className="register-form-card">
       {/* Header */}
       <div className="form-header">
-        <div className="badge">UG / PG Admissions 2026</div>
+        <div className="badge">{formHeading ? `${formHeading} Admissions 2026` : "UG / PG Admissions 2026"}</div>
         <h2 className="form-title">Start Your Journey</h2>
         <p className="form-subtitle">
           Fill in the details — we'll take it from here.

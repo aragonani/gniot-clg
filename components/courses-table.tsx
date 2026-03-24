@@ -2,7 +2,7 @@ import React from "react";
 import { Lock } from "lucide-react";
 
 interface Props {
-  handleOpenForm: () => void;
+  handleOpenForm: (headingText?: string) => void;
 }
 
 const CoursesTable = ({ handleOpenForm }: Props) => {
@@ -35,7 +35,7 @@ const CoursesTable = ({ handleOpenForm }: Props) => {
         <div className="flex flex-col sm:flex-row justify-center gap-4 mt-5">
 
           <button
-            onClick={handleOpenForm}
+            onClick={() => handleOpenForm()}
             className="flex items-center justify-center gap-2 bg-[#1A7B96] hover:bg-[#166b82] text-white font-semibold px-6 py-3 rounded-full shadow-md transition"
           >
             <Lock size={16} />
@@ -43,7 +43,7 @@ const CoursesTable = ({ handleOpenForm }: Props) => {
           </button>
 
           <button
-            onClick={handleOpenForm}
+            onClick={() => handleOpenForm()}
             className="bg-[#fcc423] hover:bg-[#fbbe05] text-black font-semibold px-6 py-3 rounded-full shadow-md transition"
           >
             Explore Scholarships
@@ -109,7 +109,7 @@ const CoursesTable = ({ handleOpenForm }: Props) => {
 
                   <td className="px-6 py-4">
                     <button
-                      onClick={handleOpenForm}
+                      onClick={() => handleOpenForm(course.name)}
                       className="bg-[#fcc423] hover:bg-[#fbbe05] text-black text-xs font-bold py-2 px-5 rounded transition active:scale-95 shadow-sm"
                     >
                       Apply Now
