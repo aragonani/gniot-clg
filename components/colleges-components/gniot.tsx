@@ -18,11 +18,18 @@ import Header from '../header'
 const GniotComponents = () => {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [modalHeading, setModalHeading] = useState("");
 
   // function to open modal with optional heading
-  const handleOpenForm = () => {
+  const handleOpenForm = (headingText="") => {
     setIsModalOpen(true);
+    setModalHeading(headingText)
   };
+
+  const handleCloseForm = () => {
+    setIsModalOpen(false);
+    setModalHeading("");
+  }
 
   useEffect(() => {
     let interval: NodeJS.Timeout;
@@ -60,8 +67,8 @@ const GniotComponents = () => {
       <WhatsAppSticky phoneNumber="917696376158" />
 
 
-       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        <RegisterForm/>
+       <Modal isOpen={isModalOpen} onClose={() => handleCloseForm()}>
+        <RegisterForm formHeading={modalHeading}/>
        </Modal>
     </div>
   )
