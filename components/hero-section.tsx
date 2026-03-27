@@ -8,7 +8,7 @@ const stats = [
   { value: "500+", label: "Recruiters", icon: "🏢" },
   { value: "100%", label: "Placement Assistance", icon: "🎯" },
   { value: "26 LPA", label: "Max Package", icon: "💰" },
-  { value: "30+", label: "Years of Excellence", icon: "🏆" },
+  { value: "20+", label: "Years of Excellence", icon: "🏆" },
 ];
 
 const accreditations = [
