@@ -185,7 +185,7 @@ export default function RegisterForm({formHeading}: Props) {
               onChange={(e) => {
                 if (f.name === "phone") {
                   // Allow only digits & max 10 length
-                  const value = e.target.value.replace(/\D/g, "").slice(0, 10);
+                  const value = e.target.value.replace(/\D/g, "").slice(0, 12);
                   setForm({ ...form, phone: value });
                 } else {
                   handleChange(e);
