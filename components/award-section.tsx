@@ -90,6 +90,7 @@ const sourceStyles: Record<string, string> = {
   iirf:     "text-gray-600 font-bold text-xs border border-gray-200 px-3 py-1 rounded",
 };
 
+
 // SVG laurel wreath
 function LaurelWreath({ rank, sup }: { rank: string; sup: string }) {
   return (
@@ -143,7 +144,7 @@ function LaurelWreath({ rank, sup }: { rank: string; sup: string }) {
 }
 
 interface Props {
-     handleOpenForm: () => void;
+  handleOpenForm: (courseName?: string, headingText?: string) => void;
 }
 
 function AwardCard({ award, index }: { award: typeof awards[0]; index: number }) {
@@ -299,7 +300,7 @@ export default function AwardsSection({handleOpenForm}: Props) {
                 href="#apply"
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
-                onClick={() => handleOpenForm()}
+                onClick={() => handleOpenForm("", "Apply For 2026 Admissions")}
                 className="inline-flex items-center justify-center gap-2 bg-[#fcc423] hover:bg-[#f5a800] text-[#001f2d] font-black text-sm px-8 py-4 rounded-xl shadow-[0_8px_28px_rgba(252,196,35,0.4)] hover:shadow-[0_12px_36px_rgba(252,196,35,0.55)] transition-all duration-200 whitespace-nowrap"
               >
                 Apply Now — 2026 Batch
@@ -310,7 +311,7 @@ export default function AwardsSection({handleOpenForm}: Props) {
                 href="#brochure"
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
-                onClick={() => handleOpenForm()}
+                onClick={() => handleOpenForm("", "Download Brochure")}
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/18 text-white font-bold text-sm px-8 py-4 rounded-xl border border-white/20 hover:border-white/40 transition-all duration-200 whitespace-nowrap backdrop-blur-sm"
               >
                 Download Brochure
