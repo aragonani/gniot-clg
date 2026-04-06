@@ -394,7 +394,7 @@ const cities = [
 ];
 
 
-export default function RegisterForm({ formHeading, selectedCourse = "" }: { formHeading: string; selectedCourse?: string }) {
+export default function RegisterForm({ formHeading, selectedCourse = "" }: { formHeading?: string; selectedCourse?: string }) {
   const [form, setForm] = useState({
     name: "",
     email: "",
