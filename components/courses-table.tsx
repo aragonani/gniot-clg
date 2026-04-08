@@ -144,13 +144,14 @@ const courseTable = courses.map((c) => ({
   name: c.label,     // 👈 UI
   value: c.value,    // 👈 actual
   fees: "₹ -- Lakhs",
+  eligibility: c.eligibility,
 }));
 
   return (
-    <section className="bg-[#f4f6f9] py-10 px-4">
+    <section className="bg-[#f4f6f9]">
 
       {/* HEADER */}
-      <div className="max-w-6xl mx-auto text-center mb-6">
+      <div className="max-w-6xl mx-auto text-center mb-6 py-10 px-4">
 
         <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
        GNIOT Noida Courses & Fees
@@ -181,19 +182,19 @@ const courseTable = courses.map((c) => ({
       </div>
 
       {/* TABLE */}
-      <div className="w-full max-w-6xl mx-auto overflow-hidden rounded-xl border border-gray-200 shadow-sm bg-white">
+      <div className="w-full max-w-6xl mx-auto my-3 overflow-hidden rounded-xl border border-gray-200 shadow-sm bg-white">
 
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
 
             {/* Table Header */}
             <thead>
-              <tr className="bg-[#263d81] text-white">
-                <th className="px-3 py-4 text-sm font-semibold uppercase">Course</th>
-                <th className="px-3 py-4 text-sm font-semibold uppercase">Total Fees</th>
-                {/* <th className="px-6 py-4 text-sm font-semibold uppercase">Eligibility</th> */}
+              <tr className="bg-[#263d81] text-white text-left">
+                <th className="px-1 md:pl-12 pl-6 sm:px-6 py-2 sm:py-4 font-semibold text-[10px] sm:text-sm uppercase tracking-wider">Course</th>
+                <th className="px-1 sm:px-6 py-2 sm:py-4 font-semibold text-[10px] sm:text-sm uppercase tracking-wider">Total Fees</th>
+                 <th className="px-1 sm:px-6 py-2 sm:py-4 font-semibold text-[10px] sm:text-sm uppercase tracking-wider">Eligibility</th> 
                 {/* <th className="px-6 py-4 text-sm font-semibold uppercase">Application Date</th> */}
-                <th className="px-3 py-4 text-sm font-semibold uppercase">Click to Unlock</th>
+                <th className="px-1 sm:px-6 py-2 sm:py-4 font-semibold text-[10px] sm:text-sm uppercase tracking-wider">Apply</th>
               </tr>
             </thead>
 
@@ -204,16 +205,16 @@ const courseTable = courses.map((c) => ({
                   key={index}
                   className="border-b border-gray-100 hover:bg-gray-50 transition"
                 >
-                  <td className="px-3 py-4">
-                    <span className="text-[#263d81] font-bold cursor-pointer hover:underline">
+                  <td className="px-1 pl-6 sm:px-6 py-1.5 sm:py-4">
+                    <span className="text-[#008DA8] font-bold text-xs sm:text-base cursor-pointer hover:underline md:pl-6 ">
                       {course.name}
                     </span>
                   </td>
 
                   {/* Fees */}
-                  <td className="px-3 py-4">
+                  <td className="px-1 pl-6 sm:px-6 py-1.5 sm:py-4">
                     <div className="flex items-center gap-3">
-                      <span className="text-gray-400 blur-sm select-none font-medium">
+                      <span className="text-gray-400 blur-[3px] sm:blur-xs select-none text-[10px] sm:text-sm font-medium">
                         {course.fees}
                       </span>
 
@@ -226,19 +227,19 @@ const courseTable = courses.map((c) => ({
                       </div>
                     </div>
                   </td>
-{/* 
-                  <td className="px-6 py-4 text-gray-700 text-sm">
+                  <td className="px-1 sm:px-6 py-1.5 sm:py-4 text-gray-700 text-[10px] sm:text-sm">
                     {course.eligibility}
                   </td>
 
+{/* 
                   <td className="px-6 py-4 text-gray-700 text-sm">
                     {course.date}
                   </td> */}
 
-                  <td className="px-3 py-4">
+                  <td className="px-1 sm:px-6 py-1.5 sm:py-4">
                     <button
                       onClick={() => handleOpenForm(course.value)}
-                      className="bg-[#fabc19] hover:bg-[#e7a808] text-black text-sm text-nowrap font-bold py-3 px-4 rounded transition active:scale-95 shadow-sm"
+                      className="bg-[#ffd11a] hover:bg-[#f5c509] text-black text-[9px] sm:text-xs font-bold py-1 px-3 sm:py-2 sm:px-5 rounded transition-all active:scale-95 shadow-sm whitespace-nowrap"
                     >
                       Apply Now
                     </button>

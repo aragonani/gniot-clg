@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation";
 import confetti from "canvas-confetti";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { CheckCircle } from "lucide-react";
 
 export default function ThankYouPage() {
   const params = useSearchParams();
@@ -12,22 +13,22 @@ export default function ThankYouPage() {
 
   useEffect(() => {
     // 🎊 Confetti burst
-    const duration = 2 * 1000;
-    const end = Date.now() + duration;
+    // const duration = 2 * 1000;
+    // const end = Date.now() + duration;
 
-    const run = () => {
-      confetti({
-        particleCount: 5,
-        spread: 70,
-        origin: { y: 0.6 },
-      });
+    // const run = () => {
+    //   confetti({
+    //     particleCount: 5,
+    //     spread: 70,
+    //     origin: { y: 0.6 },
+    //   });
 
-      if (Date.now() < end) {
-        requestAnimationFrame(run);
-      }
-    };
+    //   if (Date.now() < end) {
+    //     requestAnimationFrame(run);
+    //   }
+    // };
 
-    run();
+    // run();
 
     // ✅ GTM page view / conversion
     if (typeof window !== "undefined") {
@@ -39,30 +40,63 @@ export default function ThankYouPage() {
     }
   }, [name]);
 
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-[#f5f8fb] px-4">
+   return (
+    <div className="min-h-screen flex items-center justify-center px-4 
+      bg-gradient-to-br from-[#eef6fb] via-[#f9fcff] to-[#e6f0f7]">
+
       <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.2)]
-        border-2 border-[#1e3a5f] p-8 max-w-md w-full text-center"
+        initial={{ opacity: 0, y: 50, scale: 0.95 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="relative bg-white/80 backdrop-blur-xl 
+        rounded-3xl shadow-[0_20px_80px_rgba(0,0,0,0.12)]
+        border border-white/40 p-8 sm:p-10 max-w-md w-full text-center"
       >
-        <h1 className="text-3xl font-bold text-[#1e3a5f] mb-3">
-          🎉 Thank You, {name}!
+        {/* Glow Effect */}
+        <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-32 h-32 
+          bg-[#1e3a5f]/10 rounded-full blur-3xl" />
+
+        {/* Success Icon */}
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ delay: 0.2, type: "spring", stiffness: 120 }}
+          className="flex justify-center mb-4"
+        >
+          <div className="bg-green-100 p-4 rounded-full shadow-inner">
+            <CheckCircle className="w-10 h-10 text-green-600" />
+          </div>
+        </motion.div>
+
+        {/* Heading */}
+        <h1 className="text-2xl sm:text-3xl font-extrabold text-[#1e3a5f] mb-2">
+          Thank You, {name}!
         </h1>
 
-        <p className="text-gray-600 text-sm mb-6">
-          Your application has been submitted successfully.
-          <br />
-          Our team will contact you within 24 hours.
+        {/* Subtext */}
+        <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-6">
+          Your application has been submitted successfully. <br />
+          Our team will contact you within{" "}
+          <span className="font-semibold text-[#1e3a5f]">24 hours</span>.
         </p>
 
-        <Link
-          href="/"
-          className="inline-block bg-[#1e3a5f] text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition"
-        >
-          Back to Home
-        </Link>
+        {/* CTA Button */}
+        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+          <Link
+            href="/"
+            className="inline-block w-full 
+              bg-linear-to-r from-[#1e3a5f] to-[#2b5c8a]
+              text-white px-6 py-3 rounded-xl font-semibold
+              shadow-lg hover:shadow-xl transition-all duration-300"
+          >
+            Back to Home
+          </Link>
+        </motion.div>
+
+        {/* Optional subtle footer */}
+        <p className="text-xs text-gray-400 mt-6">
+          We’re excited to help you start your journey 🚀
+        </p>
       </motion.div>
     </div>
   );

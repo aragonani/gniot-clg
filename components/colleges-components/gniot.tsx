@@ -94,6 +94,7 @@ import WhatsAppSticky from '../whatsapp-button'
 import CoursesTable from '../courses-table'
 import Header from '../header'
 import MobileAdmissionCard from '../mobile-admission-card'
+import OfferSection from '../timer'
 
 const GniotComponents
  = () => {
@@ -101,6 +102,7 @@ const GniotComponents
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [modalHeading, setModalHeading] = useState("");
     const [selectedCourse, setSelectedCourse] = useState("");
+    const [isPaused, setIsPaused] = useState(false);
 
   // function to open modal with optional heading
   const handleOpenForm = (courseName = "", headingText = "") => {
@@ -155,6 +157,12 @@ const GniotComponents
        <Modal isOpen={isModalOpen} onClose={() => handleCloseForm()}>
         <RegisterForm formHeading={modalHeading} selectedCourse={selectedCourse} />
        </Modal>
+
+       <OfferSection 
+        handleOpenForm={() => handleOpenForm()}
+        isTimer={true}
+        isPaused={isPaused}
+      />
     </div>
   )
 }

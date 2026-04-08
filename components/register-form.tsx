@@ -300,40 +300,40 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 
-export const courses = [
-  { label: "B.Tech - Computer Science & Engineering", value: "B.Tech - Computer Science & Engineering" },
-  { label: "B.Tech - Artificial Intelligence", value: "B.Tech - Artificial Intelligence" },
-  { label: "B.Tech - Artificial Intelligence & Machine Learning", value: "B.Tech - Artificial Intelligence & Machine Learning" },
-  { label: "B.Tech - Artificial Intelligence & Data Science", value: "B.Tech - Artificial Intelligence & Data Science" },
-  { label: "B.Tech - Cyber Security", value: "B.Tech - Cyber Security" },
-  { label: "B.Tech - Data Science", value: "B.Tech - Data Science" },
-  { label: "B.Tech - Information Technology", value: "B.Tech - Information Technology" },
-  { label: "B.Tech - Electronics & Communication Engineering", value: "B.Tech - Electronics & Communication Engineering" },
-  { label: "B.Tech - Mechanical Engineering", value: "B.Tech - Mechanical Engineering" },
-  { label: "B.Tech - Civil Engineering", value: "B.Tech - Civil Engineering" },
-  { label: "B.Tech - Electrical Engineering", value: "B.Tech - Electrical Engineering" },
+// export const courses = [
+//   { label: "B.Tech - Computer Science & Engineering", value: "B.Tech - Computer Science & Engineering" },
+//   { label: "B.Tech - Artificial Intelligence", value: "B.Tech - Artificial Intelligence" },
+//   { label: "B.Tech - Artificial Intelligence & Machine Learning", value: "B.Tech - Artificial Intelligence & Machine Learning" },
+//   { label: "B.Tech - Artificial Intelligence & Data Science", value: "B.Tech - Artificial Intelligence & Data Science" },
+//   { label: "B.Tech - Cyber Security", value: "B.Tech - Cyber Security" },
+//   { label: "B.Tech - Data Science", value: "B.Tech - Data Science" },
+//   { label: "B.Tech - Information Technology", value: "B.Tech - Information Technology" },
+//   { label: "B.Tech - Electronics & Communication Engineering", value: "B.Tech - Electronics & Communication Engineering" },
+//   { label: "B.Tech - Mechanical Engineering", value: "B.Tech - Mechanical Engineering" },
+//   { label: "B.Tech - Civil Engineering", value: "B.Tech - Civil Engineering" },
+//   { label: "B.Tech - Electrical Engineering", value: "B.Tech - Electrical Engineering" },
 
-  { label: "BCA (Bachelor of Computer Applications)", value: "BCA (Bachelor of Computer Applications)" },
-  { label: "BBA (Bachelor of Business Administration)", value: "BBA (Bachelor of Business Administration)" },
-  { label: "B.Com (Bachelor of Commerce)", value: "B.Com (Bachelor of Commerce)" },
-  { label: "B.Com (Hons.)", value: "B.Com (Hons.)" },
-  { label: "B.Sc (Computer Science)", value: "B.Sc (Computer Science)" },
-  { label: "B.Sc Nursing", value: "B.Sc Nursing" },
-  { label: "B.Pharm (Bachelor of Pharmacy)", value: "B.Pharm (Bachelor of Pharmacy)" },
+//   { label: "BCA (Bachelor of Computer Applications)", value: "BCA (Bachelor of Computer Applications)" },
+//   { label: "BBA (Bachelor of Business Administration)", value: "BBA (Bachelor of Business Administration)" },
+//   { label: "B.Com (Bachelor of Commerce)", value: "B.Com (Bachelor of Commerce)" },
+//   { label: "B.Com (Hons.)", value: "B.Com (Hons.)" },
+//   { label: "B.Sc (Computer Science)", value: "B.Sc (Computer Science)" },
+//   { label: "B.Sc Nursing", value: "B.Sc Nursing" },
+//   { label: "B.Pharm (Bachelor of Pharmacy)", value: "B.Pharm (Bachelor of Pharmacy)" },
 
-  { label: "MBA (Master of Business Administration)", value: "MBA (Master of Business Administration)" },
-  { label: "PGDM (Post Graduate Diploma in Management)", value: "PGDM (Post Graduate Diploma in Management)" },
-  { label: "MCA (Master of Computer Applications)", value: "MCA (Master of Computer Applications)" },
-  { label: "M.Tech (Master of Technology)", value: "M.Tech (Master of Technology)" },
+//   { label: "MBA (Master of Business Administration)", value: "MBA (Master of Business Administration)" },
+//   { label: "PGDM (Post Graduate Diploma in Management)", value: "PGDM (Post Graduate Diploma in Management)" },
+//   { label: "MCA (Master of Computer Applications)", value: "MCA (Master of Computer Applications)" },
+//   { label: "M.Tech (Master of Technology)", value: "M.Tech (Master of Technology)" },
 
-  { label: "BCA + MCA (Integrated)", value: "BCA + MCA (Integrated)" },
-  { label: "BBA + MBA (Integrated)", value: "BBA + MBA (Integrated)" },
+//   { label: "BCA + MCA (Integrated)", value: "BCA + MCA (Integrated)" },
+//   { label: "BBA + MBA (Integrated)", value: "BBA + MBA (Integrated)" },
 
-  { label: "BA LLB", value: "BA LLB" },
-  { label: "LLB", value: "LLB" },
-  { label: "GNM (General Nursing & Midwifery)", value: "GNM (General Nursing & Midwifery)" },
-  { label: "D.Pharm (Diploma in Pharmacy)", value: "D.Pharm (Diploma in Pharmacy)" },
-];
+//   { label: "BA LLB", value: "BA LLB" },
+//   { label: "LLB", value: "LLB" },
+//   { label: "GNM (General Nursing & Midwifery)", value: "GNM (General Nursing & Midwifery)" },
+//   { label: "D.Pharm (Diploma in Pharmacy)", value: "D.Pharm (Diploma in Pharmacy)" },
+// ];
 
 // const courses = [
 //   "B.Tech - Computer Science & Engineering",
@@ -369,6 +369,46 @@ export const courses = [
 //   "GNM (General Nursing & Midwifery)",
 //   "D.Pharm (Diploma in Pharmacy)",
 // ];
+
+export const courses = [
+  // B.Tech Courses
+  { label: "B.Tech - Computer Science & Engineering", value: "B.Tech - Computer Science & Engineering", eligibility: "10+2 with PCM, 50–60%" },
+  { label: "B.Tech - Artificial Intelligence", value: "B.Tech - Artificial Intelligence", eligibility: "10+2 with PCM, 50–60%" },
+  { label: "B.Tech - Artificial Intelligence & Machine Learning", value: "B.Tech - Artificial Intelligence & Machine Learning", eligibility: "10+2 with PCM, 50–60%" },
+  { label: "B.Tech - Artificial Intelligence & Data Science", value: "B.Tech - Artificial Intelligence & Data Science", eligibility: "10+2 with PCM, 50–60%" },
+  { label: "B.Tech - Cyber Security", value: "B.Tech - Cyber Security", eligibility: "10+2 with PCM, 50–60%" },
+  { label: "B.Tech - Data Science", value: "B.Tech - Data Science", eligibility: "10+2 with PCM, 50–60%" },
+  { label: "B.Tech - Information Technology", value: "B.Tech - Information Technology", eligibility: "10+2 with PCM, 50–60%" },
+  { label: "B.Tech - Electronics & Communication Engineering", value: "B.Tech - Electronics & Communication Engineering", eligibility: "10+2 with PCM, 50–60%" },
+  { label: "B.Tech - Mechanical Engineering", value: "B.Tech - Mechanical Engineering", eligibility: "10+2 with PCM, 50–60%" },
+  { label: "B.Tech - Civil Engineering", value: "B.Tech - Civil Engineering", eligibility: "10+2 with PCM, 50–60%" },
+  { label: "B.Tech - Electrical Engineering", value: "B.Tech - Electrical Engineering", eligibility: "10+2 with PCM, 50–60%" },
+
+  // UG Courses
+  { label: "BCA (Bachelor of Computer Applications)", value: "BCA (Bachelor of Computer Applications)", eligibility: "10+2 with Maths/CS, 45–55%" },
+  { label: "BBA (Bachelor of Business Administration)", value: "BBA (Bachelor of Business Administration)", eligibility: "10+2 in any stream, 45–55%" },
+  { label: "B.Com (Bachelor of Commerce)", value: "B.Com (Bachelor of Commerce)", eligibility: "10+2 (Commerce preferred), 45–55%" },
+  { label: "B.Com (Hons.)", value: "B.Com (Hons.)", eligibility: "10+2 (Commerce/Maths), 50–60%" },
+  { label: "B.Sc (Computer Science)", value: "B.Sc (Computer Science)", eligibility: "10+2 with Maths, 45–55%" },
+  { label: "B.Sc Nursing", value: "B.Sc Nursing", eligibility: "10+2 with PCB, 50–60%" },
+  { label: "B.Pharm (Bachelor of Pharmacy)", value: "B.Pharm (Bachelor of Pharmacy)", eligibility: "10+2 with PCB/PCM, 50–60%" },
+
+  // PG Courses
+  { label: "MBA (Master of Business Administration)", value: "MBA (Master of Business Administration)", eligibility: "Graduation in any stream, 50–60%" },
+  { label: "PGDM (Post Graduate Diploma in Management)", value: "PGDM (Post Graduate Diploma in Management)", eligibility: "Graduation in any stream, 50–60%" },
+  { label: "MCA (Master of Computer Applications)", value: "MCA (Master of Computer Applications)", eligibility: "Graduation with Maths, 50–60%" },
+  { label: "M.Tech (Master of Technology)", value: "M.Tech (Master of Technology)", eligibility: "B.Tech/B.E, 55–65%" },
+
+  // Integrated Courses
+  { label: "BCA + MCA (Integrated)", value: "BCA + MCA (Integrated)", eligibility: "10+2 with Maths, 45–55%" },
+  { label: "BBA + MBA (Integrated)", value: "BBA + MBA (Integrated)", eligibility: "10+2 in any stream, 50–60%" },
+
+  // Law & Diploma
+  { label: "BA LLB", value: "BA LLB", eligibility: "10+2 in any stream, 45–55%" },
+  { label: "LLB", value: "LLB", eligibility: "Graduation in any stream, 45–55%" },
+  { label: "GNM (General Nursing & Midwifery)", value: "GNM (General Nursing & Midwifery)", eligibility: "10+2 with PCB, 40–50%" },
+  { label: "D.Pharm (Diploma in Pharmacy)", value: "D.Pharm (Diploma in Pharmacy)", eligibility: "10+2 with PCB/PCM, 45–55%" },
+];
 
 const cities = [
   "Delhi NCR",

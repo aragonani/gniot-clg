@@ -21,7 +21,7 @@ export default function WhatsAppSticky({
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-9999 group"
+      className="fixed bottom-20 md:bottom-6 right-6 z-9999 group"
     >
       <div className="flex items-center gap-2 bg-green-500 hover:bg-green-600 transition-all duration-300 shadow-lg rounded-full px-3 py-2">
 
