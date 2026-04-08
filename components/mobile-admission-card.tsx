@@ -125,7 +125,7 @@ export default function MobileAdmissionCard({handleOpenForm}: Props) {
           </div>
 
           {/* Pill 2 */}
-          <div className="flex items-center gap-2.5 bg-[#1C688D] border border-[#4082A2] hover:bg-[#195F81] px-6 py-3 rounded-full cursor-pointer transition-colors shadow-inner" onClick={() => handleOpenForm("", "Apply For Scholarships")}>
+          <div className="flex items-center gap-2.5 bg-[#1C688D] border border-[#4082A2] hover:bg-[#195F81] px-6 py-3 rounded-full cursor-pointer transition-colors shadow-inner" onClick={() => handleOpenForm("", "Apply For Upto 100% Scholarships")}>
             <BadgeCent size={18} className="text-white opacity-80" />
             <span className="font-medium text-sm">Explore Scholarships</span>
           </div>

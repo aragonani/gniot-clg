@@ -148,10 +148,10 @@ const courseTable = courses.map((c) => ({
 }));
 
   return (
-    <section className="bg-[#f4f6f9]">
+    <section className="bg-[#f4f6f9] py-10">
 
       {/* HEADER */}
-      <div className="max-w-6xl mx-auto text-center mb-6 py-10 px-4">
+      <div className="max-w-6xl mx-auto text-center mb-6 px-4">
 
         <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
        GNIOT Noida Courses & Fees
@@ -238,7 +238,7 @@ const courseTable = courses.map((c) => ({
 
                   <td className="px-1 sm:px-6 py-1.5 sm:py-4">
                     <button
-                      onClick={() => handleOpenForm(course.value)}
+                      onClick={() => handleOpenForm(course.value, `Apply for ${course.name}`)}
                       className="bg-[#ffd11a] hover:bg-[#f5c509] text-black text-[9px] sm:text-xs font-bold py-1 px-3 sm:py-2 sm:px-5 rounded transition-all active:scale-95 shadow-sm whitespace-nowrap"
                     >
                       Apply Now

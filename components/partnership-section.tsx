@@ -5,9 +5,15 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
 const partnerLogos = [
-  { name: "ACCA", url: "/gniot/logo/logo-1.webp" },
-  { name: "Xebia", url: "/gniot/logo/logo-2.webp" },
-  { name: "Siemens", url: "/gniot/logo/logo-3.webp" },
+  { name: "google", url: "/gniot/logo/google.webp" },
+  { name: "microsoft", url: "/gniot/logo/microsoft.webp" },
+  { name: "boa", url: "/gniot/logo/boa.webp" },
+  { name: "ericsson", url: "/gniot/logo/ericsson.webp" },
+  { name: "icici", url: "/gniot/logo/icici.webp" },
+  { name: "deloitte", url: "/gniot/logo/deloitte.webp" },
+  { name: "levis", url: "/gniot/logo/levis.webp" },
+  { name: "accenture", url: "/gniot/logo/accenture.webp" },
+  { name: "boat", url: "/gniot/logo/boat.webp" },
   { name: "UltraTech", url: "/gniot/logo/logo-4.webp" },
   { name: "Bosch", url: "/gniot/logo/logo-5.webp" },
   { name: "Infosys", url: "/gniot/logo/logo-6.webp" },

@@ -220,7 +220,6 @@ export default function SpecializationsSection({handleOpenForm}: Props) {
 
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">
               <motion.a
-                href="#apply"
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
                 onClick={() => handleOpenForm()}
@@ -230,11 +229,10 @@ export default function SpecializationsSection({handleOpenForm}: Props) {
                 <ArrowRight className="w-4 h-4" />
               </motion.a>
               <motion.a
-                href="#counselor"
+                href="tel:+917696376158"
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
-                onClick={() => handleOpenForm()}
-                className="inline-flex items-center justify-center gap-2 bg-white/8 hover:bg-white/15 text-white font-bold text-sm px-7 py-3.5 rounded-xl border border-white/15 hover:border-white/30 transition-all duration-200 whitespace-nowrap"
+                className="inline-flex sm:hidden items-center justify-center gap-2 bg-white/8 hover:bg-white/15 text-white font-bold text-sm px-7 py-3.5 rounded-xl border border-white/15 hover:border-white/30 transition-all duration-200 whitespace-nowrap"
               >
                 Talk to a Counselor
               </motion.a>
