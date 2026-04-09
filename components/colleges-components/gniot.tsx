@@ -95,6 +95,7 @@ import CoursesTable from '../courses-table'
 import Header from '../header'
 import MobileAdmissionCard from '../mobile-admission-card'
 import OfferSection from '../timer'
+import HighlightsSection from '../highlight-section'
 
 const GniotComponents
  = () => {
@@ -142,6 +143,7 @@ const GniotComponents
       <MobileAdmissionCard handleOpenForm={handleOpenForm}/>
       <HeroSection />
       <UniversityLogos />
+      <HighlightsSection/>
       <PartnershipSection handleOpenForm={handleOpenForm}/>
       <CoursesTable handleOpenForm={handleOpenForm}/>
       <AcademicsSection/>
