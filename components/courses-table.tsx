@@ -172,7 +172,7 @@ const courseTable = courses.map((c) => ({
           </button>
 
           <button
-            onClick={() => handleOpenForm("", "Apply For Scholarships")}
+            onClick={() => handleOpenForm("", "Apply For Upto 100% Scholarships")}
             className="bg-[#fabc19] hover:bg-[#e4a70c] text-black font-semibold px-6 py-3 rounded-full shadow-md transition"
           >
             Explore Scholarships

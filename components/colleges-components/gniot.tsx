@@ -113,7 +113,7 @@ const GniotComponents
 
   const handleCloseForm = () => {
     setIsModalOpen(false);
-    setModalHeading("Apply For GNIOT University");
+    setModalHeading("Apply For GNIOT College");
     setSelectedCourse("");
   }
 

@@ -538,8 +538,12 @@ useEffect(() => {
     border-2 border-[#1e3a5f]
     shadow-[0_20px_60px_rgba(0,0,0,0.25)]">
 
-      <h2 className="text-2xl font-bold text-[#1e3a5f] text-center mb-2">
-        {formHeading || "Apply For GNIOT University"}
+      <h2 className="text-2xl font-bold text-[#1e3a5f] text-center">
+        {formHeading || "Apply For GNIOT College"}
+      </h2>
+
+        <h2 className="text-small font-bold text-[#1e3a5f] text-center mb-2">
+         Admission Open 2026
       </h2>
 
       {/* NAME */}

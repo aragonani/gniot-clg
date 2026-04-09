@@ -91,7 +91,7 @@ export default function MobileAdmissionCard({handleOpenForm}: Props) {
 
         {/* Heading */}
         <h1 className="text-2xl md:text-6xl font-bold mb-3">
-          GNIOT Noida
+          GNIOT Greater Noida
         </h1>
 
         {/* Subheading */}
@@ -142,7 +142,7 @@ export default function MobileAdmissionCard({handleOpenForm}: Props) {
             <span className="font-medium text-sm">Download Brochure</span>
           </div>
 
-             <div className="flex items-center gap-2.5 bg-[#1C688D] border border-[#4082A2] hover:bg-[#195F81] px-6 py-3 rounded-full cursor-pointer transition-colors shadow-inner" onClick={() => handleOpenForm("", "Unlcok For Admission Process")}>
+             <div className="flex items-center gap-2.5 bg-[#1C688D] border border-[#4082A2] hover:bg-[#195F81] px-6 py-3 rounded-full cursor-pointer transition-colors shadow-inner" onClick={() => handleOpenForm("", "Unlock For Admission Process")}>
            
             <University   size={18} className="text-white opacity-80" />
             <span className="font-medium text-sm">Admission Process</span>

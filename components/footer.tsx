@@ -22,6 +22,12 @@ function Footer() {
      style={{ background: "linear-gradient(160deg, #001f2d 0%, #00304a 60%, #001825 100%)" }}>
       {/* SEO Keywords Section */}
 
+        {/* Phone Number Section */}
+      <div className="text-right font-semibold text-base md:text-lg pr-2">
+        📞 Call us: <a href="tel:+917696376158" className="underline">+91 76963 76158</a>
+      </div>
+
+
       <div className="px-4 py-6 max-w-7xl mx-auto">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:flex md:flex-wrap md:justify-center gap-3 md:gap-x-4 md:gap-y-2 text-xs md:text-sm text-left md:text-left">
           {footer.map((text: string, index: number) => (
