@@ -40,7 +40,7 @@ function Card({ icon: Icon, value, label }: CardProps) {
       bg-[#3F5AA9] text-white rounded-[18px]
       shadow-[0_10px_25px_rgba(0,0,0,0.15)]
       flex flex-col items-center justify-center text-center
-      h-[170px] px-6
+      h-42.5 px-6
       transition-transform duration-300 hover:scale-105
     "
     >
